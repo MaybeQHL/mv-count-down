@@ -1,7 +1,10 @@
 <template>
   <div id="app">
+    <img src="@/assets/logo.png" />
     <h1>mv-count-down 倒计时组件</h1>
-    <router-view />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
@@ -23,6 +26,7 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
