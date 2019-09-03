@@ -17,6 +17,10 @@ module.exports = {
   productionSourceMap: false,
   // 输出文件目录
   outputDir: 'dist',
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@', resolve('src'))
+  },
   // webpack-dev-server 相关配置
   devServer: {
     // 禁用host验证

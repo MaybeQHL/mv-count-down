@@ -28,7 +28,7 @@ export default {
     return {
       startTime: new Date().getTime(),  // 开始时间（时间戳）
       endTime: 0,      // 完成的时间（时间戳）
-      endText: '',     // 倒计时完成的提示文本
+      endText: '倒计时结束',     // 倒计时完成的提示文本
       isStart: false   // 控制倒计时开始的时机（异步请求完成开启）
     }
   },
