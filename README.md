@@ -16,11 +16,6 @@ npm i  mv-count-down
 ## 使用
 
 ```
-//main.js
-import MvCountDown from 'mv-count-down'
-Vue.use(MvCountDown)
-
-// component.vue
 <template>
   <div class="home">
     <mv-count-down @startCallback="countDownS"
@@ -39,10 +34,11 @@ Vue.use(MvCountDown)
 </template>
 
 <script>
+import MvCountDown from 'mv-count-down'
 
 export default {
   name: 'home',
-  components: {
+  components: 
     MvCountDown
   },
   data () {

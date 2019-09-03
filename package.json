@@ -1,10 +1,10 @@
 {
   "name": "mv-count-down",
-  "version": "0.1.9",
+  "version": "0.1.13",
   "private": false,
   "author": "maybe",
   "license": "MIT",
-  "main": "dist/mv-count-down.umd.min.js",
+  "main": "packages/MvCountDown/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
