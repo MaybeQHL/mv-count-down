@@ -13,6 +13,10 @@ npm i  mv-count-down
 
 ```
 
+# 在线演示
+
+http://null_639_5368.gitee.io/mv-count-down
+
 ## 使用
 
 ```
@@ -38,7 +42,7 @@ import MvCountDown from 'mv-count-down'
 
 export default {
   name: 'home',
-  components: 
+  components:
     MvCountDown
   },
   data () {
