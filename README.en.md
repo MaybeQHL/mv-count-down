@@ -1,36 +1,77 @@
 # mv-count-down
 
-#### Description
 vue 倒计时组件
 
-#### Software Architecture
-Software architecture description
+## Project setup
 
-#### Installation
+```
+yarn add mv-count-down
 
-1. xxxx
-2. xxxx
-3. xxxx
+or
 
-#### Instructions
+npm i  mv-count-down
 
-1. xxxx
-2. xxxx
-3. xxxx
+```
 
-#### Contribution
+## Project use
 
-1. Fork the repository
-2. Create Feat_xxx branch
-3. Commit your code
-4. Create Pull Request
+```
+<template>
+  <div class="home">
+    <mv-count-down @startCallback="countDownS"
+                   @endCallback="countDownE"
+                   :startTime="startTime"
+                   :endTime="endTime"
+                   :endText="endText"
+                   :dayTxt="'day'"
+                   :hourTxt="'hours'"
+                   :minutesTxt="'minutes'"
+                   :secondsTxt="'seconds'"
+                   :isStart="isStart"></mv-count-down>
+    <a class="link-blue"
+       href="https://gitee.com/null_639_5368/mv-count-down/blob/master/src/views/Home.vue">查看demo</a>
+  </div>
+</template>
 
+<script>
+import MvCountDown from '@/components/MvCountDown'
 
-#### Gitee Feature
-
-1. You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2. Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3. Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4. The most valuable open source project [GVP](https://gitee.com/gvp)
-5. The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6. The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+export default {
+  name: 'home',
+  components: {
+    MvCountDown
+  },
+  data () {
+    return {
+      startTime: new Date().getTime(),  // Start time (timestamp)
+      endTime: 0,      // Completion time (timestamp)
+      endText: '',     // Countdown completed prompt text
+      isStart: false   // Control the timing of the start of the countdown (asynchronous request completion start)
+    }
+  },
+  created () {
+    this.setEndTime(10);
+  },
+  methods: {
+    callback () {
+      // coding .......
+    },
+    // Sets how many seconds to delay the end time and turn the timestamp
+    setEndTime (value) {
+      let curTime = new Date();
+      let newTime = new Date(curTime.setSeconds(curTime.getSeconds() + value));
+      this.endTime = newTime.getTime();
+      this.isStart = true;
+    },
+    countDownS (x) {
+      // Start countdown callback
+      console.log(x)
+    },
+    countDownE () {
+      // End countdown callback
+      this.callback();
+    }
+  }
+}
+</script>
+```

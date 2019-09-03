@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+  name: 'MvCountDown',
   replace: true,
   data () {
     return {

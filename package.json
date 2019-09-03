@@ -1,10 +1,12 @@
 {
   "name": "mv-count-down",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
+  "author": "maybe",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name mv-count-down  src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
