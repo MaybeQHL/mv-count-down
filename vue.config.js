@@ -11,7 +11,7 @@ const resolve = dir => {
 // 项目部署基础
 // const BASE_URL = process.env.NODE_ENV === 'production' ? '/web' : '/';
 module.exports = {
-  publicPath: './',
+  publicPath: '../',
   assetsDir: 'assets', //静态资源目录(js,css,img,fonts)这些文件都可以写里面
   // 打包时不生成.map文件
   productionSourceMap: false,
