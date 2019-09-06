@@ -79,3 +79,9 @@ export default {
 }
 </script>
 ```
+
+## 赞助
+
+<img src="https://images.gitee.com/uploads/images/2019/0906/172106_70962611_1107178.jpeg"  height="330" width="230">
+
+万分感谢各位，作者也就 2 年经验以后多加努力。
