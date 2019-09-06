@@ -17,7 +17,7 @@
 
 <script>
 // @ is an alias to /src
-import MvCountDown from '@/components/MvCountDown'
+import MvCountDown from '@/components/MvCountDown/MvCountDown.vue'
 
 export default {
   name: 'home',
