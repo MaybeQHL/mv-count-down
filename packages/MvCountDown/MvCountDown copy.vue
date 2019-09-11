@@ -133,13 +133,9 @@ export default {
          * 当前时间小于开始时间 活动尚未开始
          */
         this.$set(this, 'tipShow', true);
-        // old
-        // setTimeout(() => {
-        //   this.runTime(this.star, this.current, this.start_message);
-        // }, 1);
-        this.$nextTick(() => {
+        setTimeout(() => {
           this.runTime(this.star, this.current, this.start_message);
-        })
+        }, 1);
       }
       else if (this.end > this.current && this.star < this.current || this.star == this.current) {
         /**
@@ -148,13 +144,9 @@ export default {
         this.$set(this, 'tipShow', false);
         this.msTime.show = true;
         this.$emit('start_callback', this.msTime.show);
-        // old
-        // setTimeout(() => {
-        //   this.runTime(this.end, this.star, this.end_message, true)
-        // }, 1);
-        this.$nextTick(() => {
+        setTimeout(() => {
           this.runTime(this.end, this.star, this.end_message, true)
-        })
+        }, 1);
       }
     },
     runTime (startTime, endTime, callFun, type) {
@@ -200,13 +192,9 @@ export default {
     start_message () {
       this.$set(this, 'tipShow', false);
       this.$emit('startCallback', this.msTime.show);
-      // old
-      // setTimeout(() => {
-      //   this.runTime(this.end, this.star, this.end_message, true)
-      // }, 1);
-      this.$nextTick(() => {
+      setTimeout(() => {
         this.runTime(this.end, this.star, this.end_message, true)
-      })
+      }, 1);
     },
     end_message () {
       this.msTime.show = false;
